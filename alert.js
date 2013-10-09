@@ -23,6 +23,7 @@ $(function (){
         '<div class="modal-body">'+
             '{{ALERT}}'+
         '</div>'+
+        '<div class="modal-footer"><button type="button" class="btn btn-primary" data-dismiss="modal"> Ok </button></div>'+
     '</div></div></div>';
     var alertObj = $('body').append(html);
     $('#jsalert_modal').modal('hide');
