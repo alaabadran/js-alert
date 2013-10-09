@@ -17,12 +17,9 @@
             <p>Welcome to my simple code. This is a functionality to override alert() into a customizable alert() with fancy look.</p>
 
             <p>
-                <form role="form" class="form-inline">
+                <form role="form">
                     <div class="form-group">
-                        <input type="text" name="alert_message" id="alert_message" class="form-control" placeholder="Enter your message here" />
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="alert_title" id="alert_title" class="form-control" placeholder="Optional: you can set a title" />
+                        <textarea name="alert_message" id="alert_message" class="form-control" placeholder="Enter your message here"></textarea>
                     </div>
                     <div class="form-group">
                         <button id="jsalert" class="btn btn-primary">Show alert</button>
@@ -41,7 +38,8 @@
                 <pre>
 $('#jsalert').on('click', function (e){
     e.preventDefault();
-    alert($('#alert_message').val(), $('#alert_title').val()); // second param is optional.
+    var msg_text = $('#alert_message').val();
+    alert(msg_text); // You can put a second param to edit alert title.
 });
                 </pre>
             </p>
