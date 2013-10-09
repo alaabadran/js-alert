@@ -29,6 +29,22 @@
                     </div>
                 </form>
             </p>
+            <p>
+                Code used above:
+                <h4>HTML</h4>
+                <pre>
+&lt;div class="form-group"&gt;
+    &lt;button id="jsalert" class="btn btn-primary"&gt;Show alert&lt;/button&gt;
+&lt;/div&gt;
+                </pre>
+                <h4>Javascript</h4>
+                <pre>
+$('#jsalert').on('click', function (e){
+    e.preventDefault();
+    alert($('#alert_message').val(), $('#alert_title').val()); // second param is optional.
+});
+                </pre>
+            </p>
         </div>
     </div>
 </div>
