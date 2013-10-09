@@ -30,6 +30,6 @@ $(function (){
     // Showing your message
     $('#jsalert').on('click', function (e){
         e.preventDefault();
-        alert($('#alert_message').val(), $('#alert_title').val()); 
+        alert($('#alert_message').val()); 
     });
 });
