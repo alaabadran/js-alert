@@ -25,17 +25,30 @@ $.jsalert = {
     /**
      * Preparing alert HTML template
      */
-    _template: function (){},
+    _template: function (){
+        var html = '';
+        var alertObj = $('body').append(html);
+    },
 
     /**
      * Show alert message.
      */
-    _alert: function (msg){},
+    _alert: function (msg){
+        $('#jsalert_modal h4').html(alert.options.title);
+        $('#jsalert_modal .modal-body').html(msg);
+        $('#jsalert_modal').fadeIn(300);
+    },
 
     /**
      * Add events to elements.
      */
-    _events: function (){},
+    _events: function (){
+        var jsalert = $('#jsalert_modal');
+        jsalert.on('click', '.close', function (e){
+            e.preventDefault();
+            jsalert.fadeOut(200);
+        });
+    },
 
 
     /**
