@@ -26,7 +26,10 @@ $.jsalert = {
      * Preparing alert HTML template
      */
     _template: function (){
-        var html = '<div class="jsalert" role="dialog" id="jsalert_modal">'+
+        var html = '<div class="modal_bg"></div>'+
+        '<div class="jsalert" role="dialog" id="jsalert_modal">'+
+            '<h4></h4>'+
+            '<div class="modal_body"></div>'+
         '</div>';
         $('body').append(html);
     },
