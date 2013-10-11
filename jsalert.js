@@ -26,8 +26,9 @@ $.jsalert = {
      * Preparing alert HTML template
      */
     _template: function (){
-        var html = '';
-        var alertObj = $('body').append(html);
+        var html = '<div class="jsalert" role="dialog" id="jsalert_modal">'+
+        '</div>';
+        $('body').append(html);
     },
 
     /**
@@ -65,7 +66,7 @@ $.jsalert = {
             '</div>'+
             '<div class="modal-footer"><button type="button" class="btn btn-primary" data-dismiss="modal"> Ok </button></div>'+
         '</div></div></div>';
-        var alertObj = $('body').append(html);
+        $('body').append(html);
         $('#jsalert_modal').modal('hide');
     },
 
