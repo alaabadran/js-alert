@@ -1,0 +1,15 @@
+
+.modal_bg, .jsalert{
+    position:fixed;
+    z-index:100;
+}
+.modal_bg{
+    width:100%;
+    top:0;
+    left:0;
+    background-color: #000;
+    opacity:0.5;
+}
+.jsalert{
+    background-color: #fff;
+}
