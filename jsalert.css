@@ -5,11 +5,42 @@
 }
 .modal_bg{
     width:100%;
+    height:100%;
     top:0;
     left:0;
     background-color: #000;
     opacity:0.5;
 }
+.modal_bg, .jsalert{
+    display:none;
+}
 .jsalert{
+    position: relative;
+    width:100%;
+}
+.jsalert_wrapper{
+    position:fixed;
+    width:500px;
+    padding:10px;
+    border-radius: 5px;
+    top:100px;
+    left:50%;
+    box-shadow: 2px 2px 5px #999;
     background-color: #fff;
+    margin-left:-250px;
+}
+.modal-body{
+    padding:10px 0;
+    border-top:#999 solid 1px;
+}
+.jsa-buttons{
+    text-align: right;
+}
+.jsa-buttons button{
+    width:120px;
+    height:26px;
+    border:0;
+    border-radius: 4px;
+    background-color: #37c;
+    color:#fff;
 }

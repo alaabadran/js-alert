@@ -28,10 +28,14 @@ $.jsalert = {
     _template: function (){
         var html = '<div class="modal_bg"></div>'+
         '<div class="jsalert" role="dialog" id="jsalert_modal">'+
-            '<h4></h4>'+
-            '<div class="modal_body"></div>'+
+            '<div class="jsalert_wrapper">'+
+                '<h4></h4>'+
+                '<div class="modal-body"></div>'+
+                '<div class="jsa-buttons"><button class="jsclose">Ok</button></div>'+
+            '</div>'+
         '</div>';
         $('body').append(html);
+        this._events();
     },
 
     /**
@@ -39,8 +43,9 @@ $.jsalert = {
      */
     _alert: function (msg){
         $('#jsalert_modal h4').html(alert.options.title);
+        console.log(msg);
         $('#jsalert_modal .modal-body').html(msg);
-        $('#jsalert_modal').fadeIn(300);
+        $('#jsalert_modal,.modal_bg').fadeIn(300);
     },
 
     /**
@@ -48,9 +53,10 @@ $.jsalert = {
      */
     _events: function (){
         var jsalert = $('#jsalert_modal');
-        jsalert.on('click', '.close', function (e){
+        jsalert.on('click', '.close, .jsclose', function (e){
             e.preventDefault();
             jsalert.fadeOut(200);
+            $('.modal_bg').fadeOut(150);
         });
     },
 
@@ -98,6 +104,10 @@ $.jsalert = {
             }
             this._bsAlert(msg);
         } else {
+            if(this.initialized === false){
+                this.initialized = true;
+                this._init();
+            }
             this._alert(msg);
         }
     }
@@ -111,7 +121,7 @@ var alert = function (msg){
 
 // Setting options
 alert.options = {
-    'bootstrap': true,
+    'bootstrap': false,
     'html_tags': false
 };
 
