@@ -8,6 +8,20 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="./jsalert.js"></script>
+    <script>
+
+    // Setting options
+    alert.options = {
+        'bootstrap': false
+    };
+
+    $(function (){
+        $('#jsalert').on('click', function (e){
+            e.preventDefault();
+            alert($('#alert_message').val());
+        });
+    });
+    </script>
 </head>
 
 <body>

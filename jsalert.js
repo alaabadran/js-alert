@@ -118,16 +118,3 @@ var alert = function (msg){
     //console.log($.alert._bootstrap_template);
     $.jsalert.fire(msg);
 };
-
-// Setting options
-alert.options = {
-    'bootstrap': false,
-    'html_tags': false
-};
-
-$(function (){
-    $('#jsalert').on('click', function (e){
-        e.preventDefault();
-        alert($('#alert_message').val());
-    });
-});
