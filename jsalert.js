@@ -1,6 +1,10 @@
 
 'use strict';
 var $alert = window.alert;
+// Setting options
+var alert.options = {
+    bootstrap: false
+}
 
 $.jsalert = {
 
