@@ -1,3 +1,10 @@
+/*
+ * User: Alaa Badran
+ * Date: 2013-12-01
+ * Time: 15:34:25
+ * Contact: me@alaabadran.com
+ * URL: http://www.alaabadran.com/
+ */
 
 'use strict';
 var $alert = window.alert;
