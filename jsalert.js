@@ -9,7 +9,11 @@
 'use strict';
 var $alert = window.alert;
 // Setting options
-var alert.options = {
+
+// redefining Alert
+var alert = {};
+
+alert.options = {
     bootstrap: false
 }
 
